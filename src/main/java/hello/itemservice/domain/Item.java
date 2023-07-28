@@ -1,8 +1,9 @@
 package hello.itemservice.domain;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@NoArgsConstructor
 public class Item {
 
     private Long id;
@@ -11,9 +12,7 @@ public class Item {
     private Integer price;
     private Integer quantity;
 
-    public Item() {
-    }
-
+    @Builder
     public Item(String itemName, Integer price, Integer quantity) {
         this.itemName = itemName;
         this.price = price;
