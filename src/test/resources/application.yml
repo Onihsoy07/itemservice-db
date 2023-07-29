@@ -2,10 +2,10 @@ spring:
   profiles:
     active: test
 
-  datasource:
-    url: jdbc:h2:tcp://localhost/~/testcase
-    username: sa
-    password:
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/testcase
+#    username: sa
+#    password:
 
 # JdbcTemplate 쿼리 확인
 logging:
