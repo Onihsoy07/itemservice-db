@@ -10,13 +10,21 @@ spring:
 # JdbcTemplate 쿼리 확인
 logging:
   level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+      springframework:
+        jdbc: debug
+
     hello:
       itemservice:
         repository:
           mybatis: trace
-    org:
-      springframework:
-        jdbc: debug
 
 mybatis:
   type-aliases-package: hello.itemservice.domain
