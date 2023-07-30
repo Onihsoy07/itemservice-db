@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Slf4j
-@Repository
+@Repository //컴포넌트 스캔 + 예외 변환 AOP 프록시(JPA 예외 -> 자바 예외)
 @RequiredArgsConstructor
 @Transactional
 public class JpaItemRepository implements ItemRepository {
@@ -46,7 +46,7 @@ public class JpaItemRepository implements ItemRepository {
 
     @Override
     public List<Item> findAll(ItemSearchCond cond) {
-        String jpql = "select i from Item i";
+        String jpql = "selectz i from Item i";
 
         Integer maxPrice = cond.getMaxPrice();
         String itemName = cond.getItemName();
